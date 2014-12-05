@@ -2,7 +2,7 @@
 #Wirtten by FineFan
 #For gathering the brief Information for Servers that handover to me,
 #which I never touched them before they going to the front line to service us
-#Version 0.1--notfinished
+#Version 0.1
 #20141204
 #fine.fan@hotmail.com
 #Hardware Information Begin#############
