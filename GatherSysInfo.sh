@@ -2,8 +2,8 @@
 #Wirtten by FineFan
 #For gathering the brief Information for Servers that handover to me,
 #which I never touched them before they going to the front line to service us
-#Version 0.1
-#20141204
+#Version 0.1.1
+#20141222
 #fine.fan@hotmail.com
 #Hardware Information Begin#############
 #Get Manufacturer Information
@@ -47,7 +47,7 @@ echo 'The disk useage:'
 df -h --total | awk '{print "       ",$0}' #There should be seven speaces
 #Login user
 echo 'Login user brief information:'
-echo -e '\t'`awk -F : '$3 >= 500 {print "Line:",NR,$0}' /etc/passwd | grep -v nologin`
+awk -F : '$3 >= 500 {print "Line:",NR,$0}' /etc/passwd | grep -v nologin | awk '{print "       ",$0}' #There should be seven speaces
 #Bridge Information
 echo 'Show Bridge Information:'
 brctl show | awk '{print "       ",$0}' #There should be seven speaces
