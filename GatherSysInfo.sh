@@ -25,9 +25,11 @@ dmidecode -t 2 | awk 'NR>5&&NR<14{print $0}'
 #Get Power Supply Information-----Problem here!!!!!!!!!!!!!!!!!!!!!!!!!
 #echo 'Power supply brief information:'
 #dmidecode -t 39 | awk 'NR>5{print $0}'
+#Get the Ethernet Interface Information
+echo 'Ethernet Interface Information:'
+lspci | grep Ethernet | awk '{print "       ",$0}'#There should be seven speaces
 #####################################
 # There should be more perceptual one thing is:
-# show the physical Ethernet Face on the output.
 # show the physical Hard Disk number on the output
 #Hardware Information End#############
 #OS Information Begin@@@@@@@@@@@@@@@@@
