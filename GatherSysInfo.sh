@@ -54,6 +54,15 @@ df -h --total | awk '{print "       ",$0}' #There should be seven speaces
 #Login user
 echo 'Login user brief information:'
 awk -F : '$3 >= 500 {print "Line:",NR,$0}' /etc/passwd | grep -v nologin | awk '{print "       ",$0}' #There should be seven speaces
+#The Cronjobs list
+echo 'Crontab jobs list:'
+#if you want to check the 'at' jobs , check /var/spool/at directory
+for users in `ls /var/spool/cron`
+do
+        echo '----------' | awk '{print "       ",$0}' #There should be seven speaces
+        echo $users ':' | awk '{print "       ",$0}' #There should be seven speaces
+        crontab -u $users -l | awk '{print "       ",$0}' #There should be seven speaces
+done
 #Bridge Information
 echo 'Show Bridge Information:'
 brctl show | awk '{print "       ",$0}' #There should be seven speaces
