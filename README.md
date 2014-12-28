@@ -13,4 +13,4 @@ Why I wrote this:<br/>
     manufacturer,Serial Number,CPU,Memory,HardDisk,MainBoard,EthernetInterfaceInfo,Power Supple.<br/>
     <br/>
     OS Information:<br/>
-    Hostname,distro,KernelVersion,DiskUsage,InterfaceInformation,RrouteInformation,BridgeInformation,KVM machines list
+    Hostname,distro,KernelVersion,DiskUsage,InterfaceInformation,RrouteInformation,VNC,BridgeInformation,KVM machines list
