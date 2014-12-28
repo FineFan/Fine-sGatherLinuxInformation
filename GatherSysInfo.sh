@@ -2,8 +2,8 @@
 #Wirtten by FineFan
 #For gathering the brief Information for Servers that handover to me,
 #which I never touched them before they going to the front line to service us
-#Version 0.1.2
-#20141225
+#Version 0.1.3
+#20141228
 #fine.fan@hotmail.com
 #Hardware Information Begin#############
 #Get Manufacturer Information
