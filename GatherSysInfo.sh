@@ -63,6 +63,10 @@ do
         echo $users ':' | awk '{print "       ",$0}' #There should be seven speaces
         crontab -u $users -l | awk '{print "       ",$0}' #There should be seven speaces
 done
+# If install vnc-server
+echo 'If Install vnc:'
+echo 'result of :rpm -qa | grep vnc-server'
+rpm -qa | grep vnc-server | awk '{print "       ",$0}' #There should be seven speaces
 #Bridge Information
 echo 'Show Bridge Information:'
 brctl show | awk '{print "       ",$0}' #There should be seven speaces
