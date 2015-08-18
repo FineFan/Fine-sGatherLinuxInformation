@@ -17,8 +17,9 @@ echo 'Memory brief information:'
 dmidecode -t 17 | grep Size
 #Get HardDisk Information
 echo 'HardDisk brief information:'
-fdisk -l | awk '/^Disk \/dev\/s/{print "       ",$0}' #There should be seven speaces
-fdisk -l | awk '/^磁盘 \/dev\/s/{print "       ",$0}' #There should be seven speaces
+#fdisk -l | awk '/^Disk \/dev\/s/{print "       ",$0}' #There should be seven speaces
+#fdisk -l | awk '/^磁盘 \/dev\/s/{print "       ",$0}' #There should be seven speaces
+lsblk | awk '{print "       ",$0}'#There should be seven speaces
 #Get MainBoard Information
 echo 'MainBoard brief information:'
 dmidecode -t 2 | awk 'NR>5&&NR<14{print $0}'
